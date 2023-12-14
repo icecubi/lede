@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2020 KFERMercer
 #
-name: OpenWrt-CI
+name: x64_OpenWrt-CI
 
 on:
   push:
@@ -64,19 +64,23 @@ jobs:
           
       - name: Checkout OpenWrt
         uses: actions/checkout@v3
+        with: 
+           fetch-depth: 0
 
       - name: Cache Toolchain
         uses: HiGarfield/cachewrtbuild@main
-
-      - name: Generate configuration file
-        run: cp ./myconfig ./.config
-        
+        with: 
+           ccache: 'true'
+           
       - name: Update feeds
         run: |
           #sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
+      - name: Generate configuration file
+        run: cp ./myconfig ./.config
+        
       - name: Download packages
         run: make download -j16
 
