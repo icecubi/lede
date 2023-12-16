@@ -9,8 +9,8 @@ name: x64_OpenWrt-CI
 
 on:
   push:
-  #schedule:
-  #  - cron: 0 20 * * *
+  schedule:
+    - cron: 0 20 * * *
 
 permissions:
   contents: read
