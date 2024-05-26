@@ -39,7 +39,10 @@ jobs:
            echo -e "$(sudo lshw -short -C memory | grep GiB)\n"
            echo "--------------------------硬盘信息--------------------------"
            echo "硬盘数量: $(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT         
-           go version
+           sudo add-apt-repository ppa:longsleep/golang-backports
+           sudo apt-get update
+           sudo apt-get install golang-go
+           
       - name: Space cleanup and Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
