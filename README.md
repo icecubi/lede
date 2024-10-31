@@ -1,6 +1,6 @@
 # 欢迎来到 Lean 的 LEDE 源码仓库
 
-为国产龙芯 LOONGSON SoC loongarch64 / 飞腾 Phytium 腾锐2000 系列架构添加支持
+为国产龙芯 LOONGSON SoC loongarch64 / 飞腾 Phytium 腾锐 D2000 系列架构添加支持
 
 I18N: [English](README_EN.md) | [简体中文](README.md) | [日本語](README_JA.md)
 
@@ -8,16 +8,18 @@ I18N: [English](README_EN.md) | [简体中文](README.md) | [日本語](README_J
 
 如有技术问题需要讨论或者交流，欢迎加入以下群：
 
-1. QQ 讨论群： Op固件技术研究群 ,号码 891659613 ，加群链接：[点击加入](https://jq.qq.com/?_wv=1027&k=XL8SK5aC "Op固件技术研究群")
-2. TG 讨论群： OP 编译官方大群 ，加群链接：[点击加入](https://t.me/JhKgAA6Hx1 "OP 编译官方大群")
+1. QQ 讨论群：Op 固件技术研究群，号码 891659613，加群链接：[点击加入](https://jq.qq.com/?_wv=1027&k=XL8SK5aC "Op固件技术研究群")
+2. TG 讨论群：OP 编译官方大群，加群链接：[点击加入](https://t.me/JhKgAA6Hx1 "OP 编译官方大群")
 
-## 软路由介绍
+## 软路由 ArmSoM Sige 系列介绍
 
-硬酷R2 - N95/N300迷你四网HomeLab服务器
+ArmSoM-Sige 系列：软路由、单板计算机、小型服务器与智能家居的全能之选。
 
-[商品介绍页面 - 硬酷科技（支持花呗）](https://item.taobao.com/item.htm?id=721197662185)
+[商品介绍页面 - ArmSom 品牌店 ](https://shop518100695.taobao.com/)
 
-[![r1](doc/r1.jpg)](https://item.taobao.com/item.htm?id=721197662185)
+购买链接：
+
+[![sige1-zh](doc/sige-zh.jpg)](https://item.taobao.com/item.htm?id=721197662185)
 
 ## 注意
 
@@ -122,7 +124,7 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 
-3. 使用 Homebrew 安装工具链、依赖与基础软件包:
+3. 使用 Homebrew 安装工具链、依赖与基础软件包：
 
    ```bash
    brew unlink awk
@@ -143,8 +145,9 @@ PS > git clone git@github.com:coolsnowwolf/lede.git <your_local_lede_path>
    echo 'export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"' >> ~/.bashrc
    echo 'export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"' >> ~/.bashrc
    ```
+
    - apple 芯片的 mac
-   
+
    ```zsh
    echo 'export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"' >> ~/.bashrc
    echo 'export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"' >> ~/.bashrc
