@@ -1,6 +1,6 @@
 --- a/drivers/phy/rockchip/phy-rockchip-inno-usb2.c
 +++ b/drivers/phy/rockchip/phy-rockchip-inno-usb2.c
-@@ -1813,6 +1813,53 @@ static const struct rockchip_usb2phy_cfg
+@@ -1905,6 +1905,56 @@ static const struct rockchip_usb2phy_cfg
  	{ /* sentinel */ }
  };
  
@@ -15,9 +15,12 @@
 +				.bvalid_det_en	= { 0x60074, 3, 2, 0, 3 },
 +				.bvalid_det_st	= { 0x60078, 3, 2, 0, 3 },
 +				.bvalid_det_clr = { 0x6007c, 3, 2, 0, 3 },
-+				.idfall_det_en	= { 0x60074, 5, 4, 0, 3 },
-+				.idfall_det_st	= { 0x60078, 5, 4, 0, 3 },
-+				.idfall_det_clr	= { 0x6007c, 5, 4, 0, 3 },
++				.idfall_det_en	= { 0x60074, 5, 5, 0, 1 },
++				.idfall_det_st	= { 0x60078, 5, 5, 0, 1 },
++				.idfall_det_clr	= { 0x6007c, 5, 5, 0, 1 },
++				.idrise_det_en	= { 0x60074, 4, 4, 0, 1 },
++				.idrise_det_st	= { 0x60078, 4, 4, 0, 1 },
++				.idrise_det_clr = { 0x6007c, 4, 4, 0, 1 },
 +				.ls_det_en	= { 0x60074, 0, 0, 0, 1 },
 +				.ls_det_st	= { 0x60078, 0, 0, 0, 1 },
 +				.ls_det_clr	= { 0x6007c, 0, 0, 0, 1 },
@@ -54,7 +57,7 @@
  static const struct rockchip_usb2phy_cfg rk3568_phy_cfgs[] = {
  	{
  		.reg = 0xfe8a0000,
-@@ -2127,6 +2174,7 @@ static const struct of_device_id rockchi
+@@ -2223,6 +2273,7 @@ static const struct of_device_id rockchi
  	{ .compatible = "rockchip,rk3328-usb2phy", .data = &rk3328_phy_cfgs },
  	{ .compatible = "rockchip,rk3366-usb2phy", .data = &rk3366_phy_cfgs },
  	{ .compatible = "rockchip,rk3399-usb2phy", .data = &rk3399_phy_cfgs },

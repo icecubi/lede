@@ -198,7 +198,7 @@ Change-Id: I2c1d32907168caf8a8afee6d1f742795b3d13536
  	case RK3568:
  	case RK3576:
  	case RK3588:
-@@ -4091,6 +4242,49 @@ static struct rockchip_pin_ctrl rk3399_p
+@@ -4084,6 +4235,49 @@ static struct rockchip_pin_ctrl rk3399_p
  		.drv_calc_reg		= rk3399_calc_drv_reg_and_bit,
  };
  
@@ -248,7 +248,7 @@ Change-Id: I2c1d32907168caf8a8afee6d1f742795b3d13536
  static struct rockchip_pin_bank rk3568_pin_banks[] = {
  	PIN_BANK_IOMUX_FLAGS(0, 32, "gpio0", IOMUX_SOURCE_PMU | IOMUX_WIDTH_4BIT,
  					     IOMUX_SOURCE_PMU | IOMUX_WIDTH_4BIT,
-@@ -4215,6 +4409,8 @@ static const struct of_device_id rockchi
+@@ -4208,6 +4402,8 @@ static const struct of_device_id rockchi
  		.data = &rk3368_pin_ctrl },
  	{ .compatible = "rockchip,rk3399-pinctrl",
  		.data = &rk3399_pin_ctrl },

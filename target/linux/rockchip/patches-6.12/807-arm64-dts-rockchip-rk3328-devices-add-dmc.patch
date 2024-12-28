@@ -8,7 +8,7 @@
  
  / {
  	model = "FriendlyElec NanoPi R2S";
-@@ -141,6 +142,10 @@
+@@ -142,6 +143,10 @@
  	cpu-supply = <&vdd_arm>;
  };
  
@@ -29,7 +29,7 @@
  
  / {
  	model = "Xunlong Orange Pi R1 Plus";
-@@ -107,6 +108,10 @@
+@@ -108,6 +109,10 @@
  	cpu-supply = <&vdd_arm>;
  };
  
