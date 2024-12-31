@@ -12,7 +12,6 @@ mediatek_setup_interfaces()
 	cmcc,rax3000m*|\
 	h3c,magic-nx30-pro|\
 	imou,lc-hx3001|\
-	konka,komi-a31|\
 	nokia,ea0326gmp)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" eth1
 		;;
@@ -125,9 +124,9 @@ mediatek_setup_macs()
 		label_mac=$wan_mac
 		;;
 	huasifei,wh3000-emmc)
-		local wifi_mac=$(mmc_get_mac_binary factory 0x4)
-		lan_mac="$(macaddr_add $wifi_mac 2)"
-		wan_mac="$(macaddr_add $wifi_mac 3)"
+		label_mac=$(mmc_get_mac_binary factory 0x4)
+		lan_mac="$(macaddr_add $label_mac 2)"
+		wan_mac="$(macaddr_add $label_mac 3)"
 		;;
 	imou,lc-hx3001)
 		lan_mac=$(mtd_get_mac_ascii u-boot-env mac)
