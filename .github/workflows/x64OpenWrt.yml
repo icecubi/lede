@@ -80,7 +80,7 @@ jobs:
           ./scripts/feeds install -a
 
       - name: Generate configuration file
-        run: cp ./myconfig .txt ./.config
+        run: cp ./config.txt ./.config
         
       - name: Download packages
         run: make download -j16
