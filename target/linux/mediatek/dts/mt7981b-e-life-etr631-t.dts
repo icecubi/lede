@@ -5,6 +5,6 @@
 #include "mt7981b-konka-e-life.dtsi"
 
 / {
-	compatible = "konka,komi-a31", "mediatek,mt7981";
-	model = "KONKA KOMI A31";
+	compatible = "e-life,etr631-t", "mediatek,mt7981";
+	model = "E-Life ETR631-T";
 };
