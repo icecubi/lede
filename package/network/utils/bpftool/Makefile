@@ -8,16 +8,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=bpftool
-PKG_VERSION:=7.4.0
+PKG_VERSION:=7.5.0
 PKG_RELEASE:=1
 
 PKG_SOURCE_URL:=https://github.com/libbpf/bpftool
-PKG_MIRROR_HASH:=18e22f72e67ff402b5ecaf314445f25c40bfe23299cb783b5834a496297c51ed
+PKG_MIRROR_HASH:=d2d55ff9cc11490b251105c9e376cbfaa9bcd26d224af779fd58cdcaa8f70ccf
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_VERSION:=v7.4.0
+PKG_SOURCE_VERSION:=v$(PKG_VERSION)
 
 PKG_MAINTAINER:=Tony Ambardar <itugrok@yahoo.com>
 
+PKG_USE_MIPS16:=0
 PKG_BUILD_FLAGS:=no-mips16 gc-sections lto
 PKG_BUILD_PARALLEL:=1
 PKG_INSTALL:=1
@@ -97,7 +98,7 @@ HOST_MAKE_FLAGS += \
 	$(if $(findstring c,$(OPENWRT_VERBOSE)),V=1,V='') \
 	check_feat=0 \
 	feature-clang-bpf-co-re=0 \
-	feature-libbfd=1 \
+	feature-libbfd=0 \
 	feature-llvm=0 \
 	feature-libcap=0 \
 	feature-disassembler-four-args=1 \
